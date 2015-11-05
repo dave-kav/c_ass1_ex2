@@ -134,13 +134,11 @@ void print_status(int* a, int size_num, int* p, int num_mov) {
 
 void user_game_palindrome(int pal_num, int num_size, char commands[], int command_size) {
 	srand(time(NULL));
-	int* a;
-	a = malloc(num_size*sizeof(int));
+	int* a = malloc(num_size*sizeof(int));
 	int num_moves = 0;
 	int index = gen_num(0, num_size);
 	int* index_ptr = &a[index];
 	
-
 	//convert pal_num to array
 	int rem = pal_num;
 	for (int i = num_size-1; i >= 0; i--) {
